@@ -1,0 +1,12 @@
+# new_dict = {new_key:new_value for item in list}
+# new_dict = {new_key:new_value for (key:value) in dic.items()}
+# for (index, row) in dt.iterrows():
+
+data_frame = {}
+dt = pandas.DataFrame(data_frame)
+for (index, row) in dt.iterrows():
+    print(index)
+    print(row)
+    print(row.x)
+    if row.x == "Ehsan":
+        pass
