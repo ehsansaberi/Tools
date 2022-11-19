@@ -1,3 +1,3 @@
-list = ["must", "reason", "noise", "wild", "busy", "bulb", "secret", "fall", "coil", "quantum", "link", "rescue"]
- 
-[@#BaSSini410]
+Dilbar 
+
+khrs = ["ltrs", "qdzrnm", "mnhrd", "vhkc", "atrx", "atka", "rdbqds", "ezkk", "bnhk", "ptzmstl", "khmj", "qdrbtd"] @#azrrhmh410
