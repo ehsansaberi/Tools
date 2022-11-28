@@ -1,0 +1,125 @@
+import numpy as np
+import pandas as pd
+import matplotlib
+
+
+
+
+
+#  print(np.random.seed(42))
+#  print(np.random.randint(1, 101, 5))
+# at = np.random.randint(1, 101, (3, 4))
+#  print(mat)
+
+#  dimension should match
+# at.reshape(2, 6)
+# rint(mat)
+
+#  it will calculate the second parameter automatic
+# at.reshape(2, -1)
+# rint(mat)
+
+#  Boolean
+# rint(mat > 50)
+
+# rint(mat.max())
+
+#  for each row and column
+# rint(mat.max(axis=0))
+# rint(mat.max(axis=1))
+
+
+d = {
+    "names": ["ehsan", "ali", "Sina", "Sabir"],
+    "ages": [20, 20, 30, 40],
+    "salary": [3000, 3400, 5000, 1400]
+
+}
+
+# df = pd.DataFrame(d)
+# print(df)
+
+# ### ???print(df.shape())
+
+# data type:
+# df.dtypes
+
+imdb = pd.read_csv("https://bit.ly/imdbratings")
+# print(imdb.head(3))
+# print(imdb[:3])
+# print(imdb[:3]) == print(imdb[:3])
+#  ----------------------------------------------------------------------
+#  to reaturn as darìta farame:
+##imdb[["title"]]
+
+# imdb[["title", "duration"]]
+# imdb[["title", "duration"]][:4]
+#
+# imdb["duration"].sort_values()
+# imdb["duration"].sort_values(ascending= False)
+# imdb["duration"].sort_values(ascending= False).values()
+# imdb["duration"].sort_values(ascending= False).values()[0]
+# index = imdb["duration"].sort_values(ascending= False).index()[0]
+#
+# imdb.sort_values("duration")
+# print(imdb.sort_values("duration")[0].title.values())
+#
+# imdb_180 = (imdb["duration"] > 180 & imdb["genre"] == "Crime")
+# test it at home
+
+# # # and -> & ...... or -> |
+# print(imdb_180)
+
+# "https://bit.ly/chiporders"
+# df = pd.read_csv("https://bit.ly/chiporders)
+orders = pd.read_table("https://bit.ly/chiporders")
+# print(orders)
+# orders["item_price"].str.replace("$", "")
+# # OR
+# orders["item_price"].str.slice(1)
+# print(orders["item_price"].str.slice(1))
+# mean_order = orders["item_price"].str.slice(1).astype(float).mean()
+# print(mean_order)
+
+chickens = orders["item_name"].str.lower().str.contains("chicken")
+#print(orders[["item_name"].str.lower().str.contains("chicken")])
+
+link = "https://bit.ly/drinksbycountry"
+drink = pd.read_csv(link)
+
+# drink[drink["continent"]] == "Europe"
+# print(drink[drink["continent"] == "Europe"]["wine_servings"].mean())
+#
+# for cont in drinks["continent"].unique():
+#
+#     result = drink[drink["continent"] == count][!wine_serving].mean()
+#     print(cont,result)
+#
+#
+# drink.groupby("continent").mean()
+# # drink.groupby("continent").mean()["wine_servings"]
+# drink.groupby("continent").mean()["wine_servings"].plot(kind="bar")
+# drink.groupby("continent").mean().plot(kind="bar")
+# drink.groupby("continent").mean().plot(kind="bar", figsize=(15, 6))
+#
+
+link = "https://bit.ly/uforeports"
+ufos = pd.read_csv(link)
+print(ufos.head(3))
+
+# new column with time
+# 1 line is missed here,
+ufos["Times2"].dt.year
+ufos["Times2"].dt.month
+ufos["Times2"].dt.month_name()
+ufos["Times2"].dt.year.value_counts()
+ufos["Times2"].dt.year.value_counts().sort_index()
+ufos["Times2"].dt.year.value_counts().sort_index().plot()
+
+
+
+
+
+
+
+
